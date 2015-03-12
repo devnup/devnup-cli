@@ -1,0 +1,18 @@
+{
+  "name": "devnup-cli",
+  "version": "0.0.1",
+  "description": "Command line interface for Devnup WS services",
+  "main": "bin/devnup",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.devnup.com:devnup/devnup-cli.git"
+  },
+  "author": "Luis Brito <luis@devnup.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.7.1"
+  }
+}
