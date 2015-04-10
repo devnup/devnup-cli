@@ -28,7 +28,7 @@ devnup generate <type> <name>
 ```
 
 Params:
+- **name**: The name of the new project, will be used as directory name. Default: 'boilerplate'.
 - **type**: The boilerplate type. Types available:
   - **nodejs**: Boilerplate for a new NodeJS API
   - **snippet**: Boilerplate for a new Angular Snippet
-- **name**: The name of the new project, will be used as directory name. Default: 'boilerplate'.
