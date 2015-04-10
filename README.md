@@ -10,7 +10,7 @@ devnup-cli
 - NodeJS Module
 
   ```sh
-  npm install -g devnup
+  npm install devnup-cli
   ```
 
   ```javascript
