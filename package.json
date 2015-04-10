@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git@git.devnup.com:devnup/devnup-cli.git"
   },
+  "main": "lib/index",
+  "preferGlobal": "true",
+  "bin": {
+    "devnup": "bin/devnup"
+  },
   "author": "Luis Brito <luis@devnup.com>",
   "license": "MIT",
   "dependencies": {
