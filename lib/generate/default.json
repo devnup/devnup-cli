@@ -1,0 +1,13 @@
+{
+  "tmp": "./tmp",
+  "packages": {
+    "nodejs": {
+      "dir": "devnup-nodejs-boilerplate.git",
+      "url": "http://git.devnup.com/devnup/devnup-nodejs-boilerplate/repository/archive.tar"
+    },
+    "snippet": {
+      "dir": "devnup-snippet-boilerplate.git",
+      "url": "http://git.devnup.com/devnup/devnup-snippet-boilerplate/repository/archive.tar"
+    }
+  }
+}

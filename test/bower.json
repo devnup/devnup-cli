@@ -1,0 +1,34 @@
+{
+  "name": "devnup-boilerplate",
+  "version": "0.0.1",
+  "homepage": "https://git.devnup.com/devnup/devnup-nodejs-boilerplate",
+  "authors": [
+    "Luis Eduardo Brito <luis@devnup.com>"
+  ],
+  "main": "app.js",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.9.1",
+    "bootstrap": "~3.3.1",
+    "angular": "~1.3.15",
+    "angular-route": "~1.3.15",
+    "ngstorage": "~0.3.0",
+    "font-awesome": "~4.2.0",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2",
+    "angular-rest-template": "~0.0.11-alpha",
+    "angular-modal-alerts": "~0.0.8"
+  },
+  "resolutions": {
+    "jquery": ">=1.6",
+    "font-awesome": "~4.3.0",
+    "angular": "~1.3.15"
+  }
+}

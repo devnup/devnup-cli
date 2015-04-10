@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+var pkg = require('../package.json');
+var program = require('commander');
+
+var devnup = require('../lib');
+
+program
+  .version(pkg.version)
+  .command('generate <type>', 'Generate a new repo based on a Devnup Boilerplate')
+  .parse(process.argv);

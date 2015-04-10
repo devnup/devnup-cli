@@ -1,0 +1,5 @@
+{
+  "manager": {
+    "host": "http://dev.manager.devnup.com/api/"
+  }
+}

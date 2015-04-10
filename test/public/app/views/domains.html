@@ -1,0 +1,14 @@
+<div class="domains">
+    <div class="container">
+        <div class="row">
+            <ul class="list-group">
+                <li class="list-group-item list-header">
+                    <div class="list-sm-10">Domains ({{domains.length}})</div>
+                    <div class="list-sm-2">Timeout</div>
+                    <div class="list-sm-fixed">Status</div>
+                </li>
+                <domain-item ng-repeat="domain in domains | orderBy: '-error'" domain="domain"></domain-item>
+            </ul>
+        </div>
+    </div>
+</div>
