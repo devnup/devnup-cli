@@ -5,12 +5,16 @@ devnup-cli
 
 - Command-line interface:
 
-  ```npm install -g devnup-cli```
+  ```sh
+  npm install -g devnup-cli
+  devnup help
+  ```
 
-- NodeJS Module
+
+- NodeJS Module inside a project
 
   ```sh
-  npm install devnup-cli
+  npm install devnup-cli --save
   ```
 
   ```javascript
