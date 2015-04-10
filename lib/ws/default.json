@@ -1,0 +1,5 @@
+{
+  "ws": {
+    "host": "http://dev.ws.devnup.com/api/"
+  }
+}
