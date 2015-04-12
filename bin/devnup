@@ -2,11 +2,13 @@
 var pkg = require('../package.json');
 var program = require('commander');
 
-var devnup = require('../lib');
-
 program
   .version(pkg.version)
   .command('generate <type>', 'Generate a new repo based on a Devnup Boilerplate')
   .command('login <email>', 'Authenticate a new user in cli')
-  .command('logo', 'Show Devnup logo as an ASCII image')
+  .command('me <token>', 'Get current user information')
+  .command('git <cmd>', 'Devnup Gitlab resources')
+  //.command('logo', 'Show Devnup logo as an ASCII image')
   .parse(process.argv);
+
+var devnup = require('../lib');

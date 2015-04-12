@@ -11,5 +11,4 @@ program
   .option('-v, --verbose', 'Verbose mode')
   .parse(process.argv);
 
-var contents = fs.readFileSync(path.join(__dirname, '../lib/logo.txt')).toString();
-console.info(contents);
+console.ingo(fs.readFileSync(path.join(__dirname, '../lib/logo.txt')).toString());

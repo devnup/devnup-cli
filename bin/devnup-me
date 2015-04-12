@@ -16,27 +16,46 @@ program
 var args = Array.prototype.slice.call(program.args);
 
 prompt.message = 'User';
+
+if (args && args.length) {
+
+  if (program.verbose) {
+    console.info('Using supplied token as authentication method...');
+  }
+  prompt.override = {
+    token: args.shift()
+  };
+
+} else if (fs.existsSync('.token')) {
+
+  if (program.verbose) {
+    console.info('Using cached token as authentication method...');
+  }
+
+  prompt.override = {
+    token: fs.readFileSync('.token').toString()
+  };
+}
+
 prompt.start();
 
 prompt.get({
   properties: {
-    password: {
-      hidden: true,
+    token: {
       required: true
     }
   }
 }, function (err, result) {
 
   if (program.verbose) {
-    console.info('Performing authentication using Devnup WS module...');
+    console.info('Getting current user information using Devnup WS module...');
   }
 
   devnup
     .ws()
     .user()
-    .login({
-      email: args.shift(),
-      password: result.password
+    .me({
+      token: result.token
     })
     .error(function (err) {
       console.error('Could not authenticate user: ' + (err && err.message ? err.message : err));
@@ -47,14 +66,9 @@ prompt.get({
         console.info('Authenticated successfully!\n');
       }
 
-      console.info('Welcome, ' + data.user.name + '!');
+      console.info(data.user.name + ' <' + data.user.email + '>');
+      console.info('Your access token is: "' + data.user.token.value + '" and will expire at "' + data.user.token.expires + '".');
 
-      if (program.verbose) {
-        console.info('Your new access token is: "' + data.user.token.value + '" and will expire at "' + data.user.token.expires + '".');
-      }
-
-      fs.writeFileSync('.token', data.user.token.value);
-
-    });
+    })
 
 });
