@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Source: social/index.js</title>
+    <title>Source: manager/member.js</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -507,41 +507,23 @@
 
 </div>
     <div class="main">
-        <h1 class="page-title" data-filename="social_index.js.html">Source: social/index.js</h1>
+        <h1 class="page-title" data-filename="manager_member.js.html">Source: manager/member.js</h1>
         
 
 
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * The WS API available modules.
- *
+            <pre class="prettyprint source linenums"><code>var DEFAULT = require('./default.json');
+var api = require('../api');
+
+/**
  * @class
+ * @type {Function}
  * @author luiseduardobrito
- * @since 4/10/15
- *
- * @alias com.devnup.cli.lib.socialModule
- *
- * @property {Function|com.devnup.cli.lib.social.facebookUtil} user The user module interface
- * @property {Function|com.devnup.cli.lib.social.twitterUtil} company The company module interface
- * @property {Function|com.devnup.cli.lib.social.instagramUtil} project The project module interface
+ * @alias com.devnup.cli.lib.manager.member
  */
-module.exports = {
-
-  facebook: function () {
-    return require('./facebook');
-  },
-
-  twitter: function () {
-    return require('./twitter');
-  },
-
-  instagram: function () {
-    return require('./instagram');
-  }
-
-};</code></pre>
+module.exports = {};</code></pre>
         </article>
     </section>
 
