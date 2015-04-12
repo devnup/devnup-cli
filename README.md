@@ -1,6 +1,10 @@
 devnup-cli
 ==========
 
+The official Devnup Command Line Interface and NodeJS Modules.
+
+Full module documentation and references available at http://cli.devnup.com/.
+
 ## Install
 
 - Command-line interface:
