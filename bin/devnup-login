@@ -1,0 +1,58 @@
+#!/usr/bin/env node
+var pkg = require('../package.json');
+
+var fs = require('fs');
+var path = require('path');
+var debug = require('debug')(pkg.name);
+var prompt = require('prompt');
+var program = require('commander');
+
+var devnup = require('../lib');
+
+program
+  .option('-v, --verbose', 'Verbose mode')
+  .parse(process.argv);
+
+var args = Array.prototype.slice.call(program.args);
+
+prompt.message = 'User';
+prompt.start();
+
+prompt.get({
+  properties: {
+    password: {
+      hidden: true,
+      required: true
+    }
+  }
+}, function (err, result) {
+
+  if (program.verbose) {
+    console.info('Performing authentication using Devnup WS module...');
+  }
+
+  devnup
+    .ws()
+    .user()
+    .login({
+      email: args.shift(),
+      password: result.password
+    })
+    .error(function (err) {
+      console.error('Could not authenticate user: ' + (err && err.message ? err.message : err));
+    })
+    .success(function (data) {
+
+      if (program.verbose) {
+        console.info('Authenticated successfully!\n');
+      }
+
+      console.info('Welcome, ' + data.user.name + '!');
+
+      if (program.verbose) {
+        console.info('Your new access token is: "' + data.user.token.value + '" and will expire at "' + data.user.token.expires + '".');
+      }
+
+    })
+
+});

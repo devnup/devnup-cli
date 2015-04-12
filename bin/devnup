@@ -7,4 +7,6 @@ var devnup = require('../lib');
 program
   .version(pkg.version)
   .command('generate <type>', 'Generate a new repo based on a Devnup Boilerplate')
+  .command('login <email>', 'Authenticate a new user in cli')
+  .command('logo', 'Show Devnup logo as an ASCII image')
   .parse(process.argv);

@@ -10,15 +10,15 @@ Full module documentation and references available at http://cli.devnup.com/.
 - Command-line interface:
 
   ```sh
-  npm install -g devnup-cli
-  devnup help
+  $ npm install -g devnup-cli
+  $ devnup help
   ```
 
 
 - NodeJS Module inside a project
 
   ```sh
-  npm install devnup-cli --save
+  $ npm install devnup-cli --save
   ```
 
   ```javascript
@@ -29,12 +29,26 @@ Full module documentation and references available at http://cli.devnup.com/.
 
 ## Command Line Interface
 
+The command line interface is a simple tool for accessing Devnup library and resources using a NodeJS global module. It is publicly available through NPM.
+
 #### Commands:
+
+- **Version**: Gets de library version.
+
+  ```sh
+  $ devnup version
+  ```
+
+- **Login**: Authenticate a Devnup user and store its token for accessing resources.
+
+  ```sh
+  $ devnup login <email>
+  ```
 
 - **Generate**: Create a new project based on a Devnup Boilerplate use the ```generate``` command.
 
   ```sh
-  devnup generate <type> <name>
+  $ devnup generate <type> <name> [-v | --verbose]
   ```
 
   Params:
@@ -43,12 +57,7 @@ Full module documentation and references available at http://cli.devnup.com/.
     - **nodejs**: Boilerplate for a new NodeJS API
     - **snippet**: Boilerplate for a new Angular Snippet
 
-- **Version**: Gets de library version
 
-  ```sh
-  devnup version
-  ```
-  
 ## NodeJS Module
 
 #### Submodules:
@@ -56,34 +65,34 @@ Full module documentation and references available at http://cli.devnup.com/.
 - **Email**: Interface to the Devnup Email API. [Module documentation](http://cli.devnup.com/com.devnup.cli.lib.emailModule.html)
 
   ```javascript
-    devnup.email();
+  devnup.email();
   ```
 
 
 - **Generate**: Interface to the Devnup Generator and its Boilerplates. [Module documentation](http://cli.devnup.com/com.devnup.cli.lib.generateModule.html)
 
   ```javascript
-    devnup.generate();
+  devnup.generate();
   ```
 
 
 - **Manager**: Interface to the Devnup Manager API. [Module documentation](http://cli.devnup.com/com.devnup.cli.lib.managerModule.html)
 
   ```javascript
-    devnup.manager();
+  devnup.manager();
   ```
 
 
 - **Social**: Interface to the Devnup Social API. [Module documentation](http://cli.devnup.com/com.devnup.cli.lib.socialModule.html)
 
   ```javascript
-    devnup.social();
+  devnup.social();
   ```
 
 
 - **WS**: Interface to the Devnup WS APIs. [Module documentation](http://cli.devnup.com/com.devnup.cli.lib.wsModule.html)
 
   ```javascript
-    devnup.ws();
+  devnup.ws();
   ```
 
