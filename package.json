@@ -6,7 +6,7 @@
   "scripts": {
     "start": "[ -z \"$PORT\" ] && echo \"PORT not set\" && export PORT=3000; cd docs/ && ../node_modules/http-server/bin/http-server -p \"$PORT\";",
     "postinstall": "./scripts/postinstall.sh",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
