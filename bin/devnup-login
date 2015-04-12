@@ -65,7 +65,8 @@ prompt.get({
         console.info('Your new access token is: "' + data.user.token.value + '" and will expire at "' + data.user.token.expires + '".');
       }
 
-      fs.writeFileSync('.token', data.user.token.value);
+      var p = path.join(__dirname, '.token');
+      fs.writeFileSync(p, data.user.token.value);
 
     });
 

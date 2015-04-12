@@ -17,6 +17,8 @@ var args = Array.prototype.slice.call(program.args);
 
 prompt.message = 'User';
 
+var p = path.join(__dirname, '.token');
+
 if (args && args.length) {
 
   if (program.verbose) {
@@ -26,14 +28,14 @@ if (args && args.length) {
     token: args.shift()
   };
 
-} else if (fs.existsSync('.token')) {
+} else if (fs.existsSync(p)) {
 
   if (program.verbose) {
     console.info('Using cached token as authentication method...');
   }
 
   prompt.override = {
-    token: fs.readFileSync('.token').toString()
+    token: fs.readFileSync(p).toString()
   };
 }
 
