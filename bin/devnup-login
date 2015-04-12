@@ -15,13 +15,25 @@ program
 
 var args = Array.prototype.slice.call(program.args);
 
+if (args && args.length) {
+  prompt.override = {
+    email: args.shift()
+  };
+}
+
 prompt.message = 'User';
 prompt.start();
 
 prompt.get({
   properties: {
+    email: {
+      required: true,
+      type: 'string',
+      message: 'Email must be valid'
+    },
     password: {
       hidden: true,
+      type: 'string',
       required: true
     }
   }
@@ -35,7 +47,7 @@ prompt.get({
     .ws()
     .user()
     .login({
-      email: args.shift(),
+      email: result.email,
       password: result.password
     })
     .error(function (err) {
