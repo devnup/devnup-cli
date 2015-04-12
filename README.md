@@ -49,8 +49,37 @@ devnup-cli
 
 #### Submodules:
 
-- **Email**: Interface to the Devnup Email APIs
-- **Generate**: Interface to the Devnup Generator and its Boilerplates
-- **Manager**: Interface to the Devnup Email APIs
-- **Social**: Interface to the Devnup Email APIs
-- **WS**: Interface to the Devnup WS APIs
+- **Email**: Interface to the Devnup Email API. [Module documentation](http://cli.devnup.com/com.devnup.cli.lib.emailModule.html)
+
+  ```javascript
+    devnup.email();
+  ```
+
+
+- **Generate**: Interface to the Devnup Generator and its Boilerplates. [Module documentation](http://cli.devnup.com/com.devnup.cli.lib.generateModule.html)
+
+  ```javascript
+    devnup.generate();
+  ```
+
+
+- **Manager**: Interface to the Devnup Manager API. [Module documentation](http://cli.devnup.com/com.devnup.cli.lib.managerModule.html)
+
+  ```javascript
+    devnup.manager();
+  ```
+
+
+- **Social**: Interface to the Devnup Social API. [Module documentation](http://cli.devnup.com/com.devnup.cli.lib.socialModule.html)
+
+  ```javascript
+    devnup.social();
+  ```
+
+
+- **WS**: Interface to the Devnup WS APIs. [Module documentation](http://cli.devnup.com/com.devnup.cli.lib.wsModule.html)
+
+  ```javascript
+    devnup.ws();
+  ```
+
