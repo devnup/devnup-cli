@@ -5,7 +5,6 @@
   "main": "lib/index",
   "scripts": {
     "start": "[ -z \"$PORT\" ] && echo \"PORT not set\" && export PORT=3000; cd docs/ && ../node_modules/http-server/bin/http-server -p \"$PORT\";",
-    "postinstall": "./scripts/postinstall.sh",
     "test": "./node_modules/mocha/bin/mocha tests/**"
   },
   "repository": {
