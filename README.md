@@ -13,13 +13,14 @@ The command line interface is a simple tool for accessing Devnup library and res
 
 #### Installing using NPM:
 
+
   ```sh
   $ npm install -g devnup-cli
   $ devnup help
   ```
 
-
 #### Commands:
+
 
 - **Version**: Gets de library version.
 
@@ -27,11 +28,48 @@ The command line interface is a simple tool for accessing Devnup library and res
   $ devnup version
   ```
 
+
 - **Login**: Authenticate a Devnup user and store its token for accessing resources.
 
   ```sh
-  $ devnup login <email>
+  $ devnup login <email> [-v | --verbose]
   ```
+
+  Options:
+    - **verbose**: Verbose logging mode
+
+
+- **Clone**: Clone a Git project from Devnup Gitlab.
+
+  ```sh
+  $ devnup clone [<org>/]<name> [-v | --verbose] [-s | --ssh] [-h | --https]
+  ```
+
+  Params:
+  - **org (optional)**: The name of the organization in Devnup Gitlab. **Default**: 'devnup'.
+  - **name**: The name of the project in Devnup Gitlab.
+
+  Options:
+  - **verbose**: Verbose logging mode
+  - **ssh**: Clone using SSH
+  - **https**: Clone using HTTPS
+
+
+- **Remote**: Add a remote repository reference from Devnup Gitlab to your local git.
+
+  ```sh
+  $ devnup clone [<org>/]<name> [-v | --verbose] [-s | --ssh] [-h | --https]
+  ```
+
+  Params:
+  - **org (optional)**: The name of the organization in Devnup Gitlab. **Default**: 'devnup'.
+  - **name**: The name of the project in Devnup Gitlab.
+
+  Options:
+  - **verbose**: Verbose logging mode
+  - **ssh**: Add SSH url
+  - **https**: Add HTTPS url
+
 
 - **Generate**: Create a new project based on a Devnup Boilerplate use the ```generate``` command.
 
@@ -45,10 +83,15 @@ The command line interface is a simple tool for accessing Devnup library and res
     - **nodejs**: Boilerplate for a new NodeJS API
     - **snippet**: Boilerplate for a new Angular Snippet
 
+  Options:
+  - **verbose**: Verbose logging mode
+
 
 ## NodeJS Module
 
+
 #### Installing using NPM:
+
 
   ```sh
   $ npm install devnup-cli --save
@@ -59,7 +102,9 @@ The command line interface is a simple tool for accessing Devnup library and res
   console.log(devnup.version());
   ```
 
+
 #### Submodules:
+
 
 - **Email**: Interface to the Devnup Email API. [Module documentation](http://cli.devnup.com/com.devnup.cli.lib.emailModule.html)
 
@@ -94,6 +139,4 @@ The command line interface is a simple tool for accessing Devnup library and res
   ```javascript
   devnup.ws();
   ```
-
-
 
