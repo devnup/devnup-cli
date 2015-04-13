@@ -1,6 +1,6 @@
 {
   "name": "devnup-cli",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.2-alpha",
   "description": "Command line interface for Devnup WS services",
   "main": "lib/index",
   "scripts": {
