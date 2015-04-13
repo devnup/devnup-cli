@@ -5,31 +5,19 @@ The official Devnup Command Line Interface and NodeJS Modules.
 
 Full module documentation and references available at http://cli.devnup.com/.
 
-## Install
 
-- Command-line interface:
+## Command Line Interface
+
+The command line interface is a simple tool for accessing Devnup library and resources using a NodeJS global module. It is publicly available through NPM.
+
+
+#### Installing using NPM:
 
   ```sh
   $ npm install -g devnup-cli
   $ devnup help
   ```
 
-
-- NodeJS Module inside a project
-
-  ```sh
-  $ npm install devnup-cli --save
-  ```
-
-  ```javascript
-  var devnup = require('devnup-cli');
-
-  console.log(devnup.version());
-  ```
-
-## Command Line Interface
-
-The command line interface is a simple tool for accessing Devnup library and resources using a NodeJS global module. It is publicly available through NPM.
 
 #### Commands:
 
@@ -59,6 +47,17 @@ The command line interface is a simple tool for accessing Devnup library and res
 
 
 ## NodeJS Module
+
+#### Installing using NPM:
+
+  ```sh
+  $ npm install devnup-cli --save
+  ```
+
+  ```javascript
+  var devnup = require('devnup-cli');
+  console.log(devnup.version());
+  ```
 
 #### Submodules:
 

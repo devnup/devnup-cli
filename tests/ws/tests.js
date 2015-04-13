@@ -12,8 +12,8 @@ describe('devnup', function () {
     it('should have a valid interface for the WS module', function () {
 
       devnup.should.have.property('ws');
-
       devnup.ws().should.be.ok;
+
       devnup.ws().should.have.property('company');
       devnup.ws().company().should.be.ok;
 
