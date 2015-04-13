@@ -22,7 +22,7 @@ The command line interface is a simple tool for accessing Devnup library and res
 #### Commands:
 
 
-- **Version**: Gets de library version.
+- **Version**: Gets the library version.
 
   ```sh
   $ devnup version
