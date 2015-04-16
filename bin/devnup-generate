@@ -2,11 +2,11 @@
 var pkg = require('../package.json');
 var program = require('commander');
 
-var debug = require('debug')(pkg.name);
 var devnup = require('../lib');
 
 program
   .option('-v, --verbose', 'Verbose mode')
+  .option('-S, --save', 'Save boilerplate as a new project in Devnup Gitlab')
   .parse(process.argv);
 
 var args = Array.prototype.slice.call(program.args);
@@ -17,5 +17,10 @@ var name = args.shift();
 devnup
   .generate()
   .download(cmd, name, function () {
-    debug('Boilerplate generated successfully!');
+
+    // TODO: create project in gitlab
+    if (program.save) {
+      var gitlab = require('node-gitlab')
+    }
+
   }, program.verbose);
