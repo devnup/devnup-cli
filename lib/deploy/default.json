@@ -1,0 +1,13 @@
+{
+  "tmp": "",
+  "scripts": {
+    "nodejs": {
+      "file": "http://git.devnup.com/devnup/devnup-ci-scripts/blob/master/nodejs.sh",
+      "raw": "http://git.devnup.com/devnup/devnup-ci-scripts/raw/master/nodejs.sh"
+    },
+    "play": {
+      "file": "http://git.devnup.com/devnup/devnup-ci-scripts/blob/master/play.sh",
+      "raw": "http://git.devnup.com/devnup/devnup-ci-scripts/raw/master/play.sh"
+    }
+  }
+}

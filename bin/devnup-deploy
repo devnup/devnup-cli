@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+var devnup = require('../lib');
+var program = require('commander');
+
+program
+  .option('-v, --verbose', 'Verbose mode')
+  .parse(process.argv);
+
+var args = Array.prototype.slice.call(program.args);
+var cmd = args.shift();
+
+devnup
+  .deploy()
+  .download(cmd, function () {
+    // TODO: Run build script
+  }, program.verbose);
