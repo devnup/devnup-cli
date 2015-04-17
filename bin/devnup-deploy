@@ -11,6 +11,28 @@ var cmd = args.shift();
 
 devnup
   .deploy()
-  .download(cmd, function () {
-    // TODO: Run build script
+  .download(cmd, function (err) {
+
+
+    if (err) {
+
+      console.log(err)
+
+    } else {
+
+      devnup
+        .deploy()
+        .run(function (err) {
+
+          if (err) {
+
+            console.log(err)
+
+          } else {
+
+            console.log('Build completed successfully');
+
+          }
+        }, program.verbose)
+    }
   }, program.verbose);

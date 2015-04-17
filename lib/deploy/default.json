@@ -1,5 +1,6 @@
 {
   "tmp": "",
+  "target": "deploy.sh",
   "scripts": {
     "nodejs": {
       "file": "http://git.devnup.com/devnup/devnup-ci-scripts/blob/master/nodejs.sh",

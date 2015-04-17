@@ -49,6 +49,8 @@
                 
                 <span class="subtitle">Methods</span>
                 
+                    <li data-name="com.devnup.cli.lib.deploy"><a href="com.devnup.cli.lib.html#.deploy">deploy</a></li>
+                
                     <li data-name="com.devnup.cli.lib.email"><a href="com.devnup.cli.lib.html#.email">email</a></li>
                 
                     <li data-name="com.devnup.cli.lib.generate"><a href="com.devnup.cli.lib.html#.generate">generate</a></li>
@@ -119,6 +121,29 @@
                 <li data-name="com.devnup.cli.lib.api.callback.errorCallback"><a href="com.devnup.cli.lib.api.callback.html#.errorCallback">errorCallback</a></li>
             
                 <li data-name="com.devnup.cli.lib.api.callback.successCallback"><a href="com.devnup.cli.lib.api.callback.html#.successCallback">successCallback</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="com.devnup.cli.lib.deployModule">
+            <span class="title">
+                <a href="com.devnup.cli.lib.deployModule.html">com.devnup.cli.lib.deployModule</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+                
+                <span class="subtitle">Methods</span>
+                
+                    <li data-name="com.devnup.cli.lib.deployModule.download"><a href="com.devnup.cli.lib.deployModule.html#.download">download</a></li>
+                
+                </ul>
+            <ul class="typedefs itemMembers">
             
             </ul>
             <ul class="events itemMembers">
@@ -564,23 +589,51 @@
     <section>
         <article class="readme"><h1>devnup-cli</h1><p>The official Devnup Command Line Interface and NodeJS Modules.</p>
 <p>Full module documentation and references available at http://cli.devnup.com/.</p>
-<h2>Install</h2><ul>
-<li><p>Command-line interface:</p>
-<pre class="prettyprint source lang-sh"><code>$ npm install -g devnup-cli
-$ devnup help</code></pre></li>
+<h2>Command Line Interface</h2><p>The command line interface is a simple tool for accessing Devnup library and resources using a NodeJS global module. It is publicly available through NPM.</p>
+<h4>Installing using NPM:</h4><pre class="prettyprint source lang-sh"><code>  $ npm install -g devnup-cli
+  $ devnup help</code></pre><h4>Commands:</h4><ul>
+<li><p><strong>Version</strong>: Gets the library version.</p>
+<pre class="prettyprint source lang-sh"><code>$ devnup version</code></pre></li>
 </ul>
 <ul>
-<li><p>NodeJS Module inside a project</p>
-<pre class="prettyprint source lang-sh"><code>$ npm install devnup-cli --save</code></pre><pre class="prettyprint source lang-javascript"><code>var devnup = require('devnup-cli');
-
-console.log(devnup.version());</code></pre></li>
-</ul>
-<h2>Command Line Interface</h2><p>The command line interface is a simple tool for accessing Devnup library and resources using a NodeJS global module. It is publicly available through NPM.</p>
-<h4>Commands:</h4><ul>
-<li><p><strong>Version</strong>: Gets de library version.</p>
-<pre class="prettyprint source lang-sh"><code>$ devnup version</code></pre></li>
 <li><p><strong>Login</strong>: Authenticate a Devnup user and store its token for accessing resources.</p>
-<pre class="prettyprint source lang-sh"><code>$ devnup login &lt;email></code></pre></li>
+<pre class="prettyprint source lang-sh"><code>$ devnup login &lt;email> [-v | --verbose]</code></pre><p>Options:</p>
+<ul>
+<li><strong>verbose</strong>: Verbose logging mode</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Clone</strong>: Clone a Git project from Devnup Gitlab.</p>
+<pre class="prettyprint source lang-sh"><code>$ devnup clone [&lt;org>/]&lt;name> [-v | --verbose] [-s | --ssh] [-h | --https]</code></pre><p>Params:</p>
+<ul>
+<li><strong>org (optional)</strong>: The name of the organization in Devnup Gitlab. <strong>Default</strong>: 'devnup'.</li>
+<li><strong>name</strong>: The name of the project in Devnup Gitlab.</li>
+</ul>
+<p>Options:</p>
+<ul>
+<li><strong>verbose</strong>: Verbose logging mode</li>
+<li><strong>ssh</strong>: Clone using SSH</li>
+<li><strong>https</strong>: Clone using HTTPS</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Remote</strong>: Add a remote repository reference from Devnup Gitlab to your local git.</p>
+<pre class="prettyprint source lang-sh"><code>$ devnup clone [&lt;org>/]&lt;name> [-v | --verbose] [-s | --ssh] [-h | --https]</code></pre><p>Params:</p>
+<ul>
+<li><strong>org (optional)</strong>: The name of the organization in Devnup Gitlab. <strong>Default</strong>: 'devnup'.</li>
+<li><strong>name</strong>: The name of the project in Devnup Gitlab.</li>
+</ul>
+<p>Options:</p>
+<ul>
+<li><strong>verbose</strong>: Verbose logging mode</li>
+<li><strong>ssh</strong>: Add SSH url</li>
+<li><strong>https</strong>: Add HTTPS url</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li><p><strong>Generate</strong>: Create a new project based on a Devnup Boilerplate use the <code>generate</code> command.</p>
 <pre class="prettyprint source lang-sh"><code>$ devnup generate &lt;type> &lt;name> [-v | --verbose]</code></pre><p>Params:</p>
 <ul>
@@ -591,9 +644,14 @@ console.log(devnup.version());</code></pre></li>
 </ul>
 </li>
 </ul>
+<p>Options:</p>
+<ul>
+<li><strong>verbose</strong>: Verbose logging mode</li>
+</ul>
 </li>
 </ul>
-<h2>NodeJS Module</h2><h4>Submodules:</h4><ul>
+<h2>NodeJS Module</h2><h4>Installing using NPM:</h4><pre class="prettyprint source lang-sh"><code>  $ npm install devnup-cli --save</code></pre><pre class="prettyprint source lang-javascript"><code>  var devnup = require('devnup-cli');
+  console.log(devnup.version());</code></pre><h4>Submodules:</h4><ul>
 <li><p><strong>Email</strong>: Interface to the Devnup Email API. <a href="http://cli.devnup.com/com.devnup.cli.lib.emailModule.html">Module documentation</a></p>
 <pre class="prettyprint source lang-javascript"><code>devnup.email();</code></pre></li>
 </ul>
@@ -623,7 +681,7 @@ console.log(devnup.version());</code></pre></li>
         
 
         <footer>
-            Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-beta3</a> on Sun Apr 12 2015 23:44:21 GMT-0300 (BRT)
+            Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-beta3</a> on Fri Apr 17 2015 11:45:12 GMT-0300 (BRT)
         </footer>
     </div>
 </div>
